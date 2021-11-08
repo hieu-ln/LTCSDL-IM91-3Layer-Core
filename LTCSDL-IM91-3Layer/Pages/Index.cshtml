@@ -1,0 +1,26 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Xin chào lớp IM91 dễ thương !!!";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Lớp IM91 thật dễ thương !!!</h1>
+    <p>Danh sách cách Category lấy được:</p>
+    <table class="table-bordered">
+        <tr>
+            <th>ID</th>
+            <th>Category Name</th>
+            <th>Description</th>
+        </tr>
+        @foreach (var cat in Model.lst)
+        {
+            <tr>
+                <td>@cat.CategoryID.</td>
+                <td>@cat.CategoryName.</td>
+                <td>@cat.Description</td>
+            </tr>
+        }
+
+    </table>
+</div>
